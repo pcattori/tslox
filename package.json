@@ -5,8 +5,11 @@
   },
   "devDependencies": {
     "@types/node": "^16.4.8",
+    "@types/readline-sync": "^1.4.4",
     "ts-node": "^10.1.0",
     "typescript": "^4.3.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
