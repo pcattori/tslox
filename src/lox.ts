@@ -11,14 +11,15 @@ type Error = {
 
 export const main = () => {
   const args = process.argv.slice(2)
-  if (args.length > 1) {
-    console.log("Usage: tslox [script]")
-    process.exit(exitCodes.USAGE)
+  switch (args.length) {
+    case 0:
+      return runPrompt()
+    case 1:
+      return runFile(args[0])
+    default:
+      console.log("Usage: tslox [script]")
+      process.exit(exitCodes.USAGE)
   }
-  if (args.length === 1) {
-    runFile(args[0])
-  }
-  runPrompt()
 }
 
 const runFile = (path: string) => {
