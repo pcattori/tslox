@@ -3,7 +3,7 @@ import readlineSync from "readline-sync"
 
 import * as exitCodes from "./exit-codes"
 
-type Error = {
+interface Error {
   line: number
   where?: string
   message: string
