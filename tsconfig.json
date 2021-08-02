@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      "lib": ["esnext"],
+      "allowJs": false,
+      "moduleResolution": "node",
+      "strict": true,
+      "esModuleInterop": true,
+      "downlevelIteration": true
+    }
+  }
