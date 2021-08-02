@@ -2,12 +2,7 @@ import fs from "fs"
 import readlineSync from "readline-sync"
 
 import * as exitCodes from "./exit-codes"
-
-interface Error {
-  line: number
-  where?: string
-  message: string
-}
+import { Error, report } from "./error"
 
 export const main = () => {
   const args = process.argv.slice(2)
@@ -44,6 +39,3 @@ const run = (source: string): Error | undefined => {
   console.log(source)
   return
 }
-
-const report = ({ line, where = "", message }: Error) =>
-  console.error(`[line ${line}] Error${where}: ${message}`)
