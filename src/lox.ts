@@ -3,6 +3,7 @@ import readlineSync from "readline-sync"
 
 import * as exitCodes from "./exit-codes"
 import * as error from "./error"
+import * as scanner from "./scan"
 
 export const main = () => {
   const args = process.argv.slice(2)
